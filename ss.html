@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let correctNumber = Math.floor(Math.random() * 100) + 1;
+      let numberGuess = prompt("number");
+      console.log(parseInt(numberGuess));
+
+      let message = "";
+      if (!numberGuess) {
+        alert("You need to pick a number");
+      } else if (parseInt(numberGuess) < correctNumber) {
+        message = "You guessed too low";
+      } else if (parseInt(numberGuess) > correctNumber) {
+        message = "You guessed too high";
+      } else {
+        message = "Congratulations! You guessed the number";
+      }
+      console.log(message);
+    </script>
+  </body>
+</html>
